@@ -1,0 +1,248 @@
+/* Main container styling */
+div {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Header styling */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+th, td {
+  padding: 16px 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+}
+
+td {
+  background-color: #f6f8fa;
+  color: #555;
+}
+
+/* Hover effect on rows */
+tr:hover td {
+  background-color: #e9f5ff;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Stripe effect for table rows */
+tr:nth-child(odd) td {
+  background-color: #f4f4f4;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 16px;
+    width: 50%;
+    padding-right: 10px;
+    font-weight: 600;
+    text-align: left;
+  }
+}
+
+/* Subtle fade-in animation */
+tr {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+tr:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+tr:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Input field styling */
+input[type="text"], input[type="email"], input[type="number"] {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+/* Input field focus effect */
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  background-color: #fff;
+}
+
+/* Placeholder styling */
+input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+/* Submit button hover effect */
+button[type="submit"]:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Submit button active effect */
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* Disabled submit button state */
+button[type="submit"]:disabled {
+  background-color: #b0d4ff;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+/* Main container styling */
+.form-box {
+  width: 80vw;
+  height: 80vh;
+  max-width: 600px;
+  max-height: 500px;
+  margin: auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Input field styling */
+input[type="text"], input[type="email"], input[type="number"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f4f4f4;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field focus effect */
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+/* Submit button hover effect */
+button[type="submit"]:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 8px 16px rgba(0, 123, 255, 0.3);
+}
+
+/* Submit button active effect */
+button[type="submit"]:active {
+  transform: scale(0.98);
+  box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.15);
+}
+
+
